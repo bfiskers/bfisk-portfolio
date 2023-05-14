@@ -24,12 +24,11 @@ export default {
 .sectionButton {
   all: unset;
   font-size: 60px;
-  border: grey 1px solid;
   border-radius: 20px;
   width: 40%;
   padding-top: 60px;
   padding-bottom: 60px;
-  box-shadow: 1px 1px;
+  box-shadow: 2px 2px grey;
   margin: 10px;
   min-width: 300px;
   display: flex;
@@ -40,6 +39,11 @@ export default {
   position: relative;
   font-weight: bold;
   cursor: pointer;
+  max-width: 600px;
+}
+
+.sectionButton:hover {
+  box-shadow: 3px 3px black;
 }
 
 .sectionButton::before {
@@ -65,5 +69,16 @@ export default {
 .buttonText {
   color: white;
   z-index: 1;
+  font-size: 1em;
+}
+
+@media only screen and (max-width : 900px) {
+  .buttonText {
+    font-size: 0.8em;
+  }
+
+  .sectionButton {
+    width: 80%;
+  }
 }
 </style>
