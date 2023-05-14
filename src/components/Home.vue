@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <input v-model="blue" />
+  <input v-model="blue" /> aa
 </template>
 
 <style scoped>
