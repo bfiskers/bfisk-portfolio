@@ -1,16 +1,24 @@
 <script>
 import SectionButton from './SectionButton.vue';
+import bee from '../assets/images/bee.png';
+import ray from '../assets/images/sphereroom.png';
+//import prof from '../assets/images/ProfessionalPic.jpg';
 
 export default {
-    components: { SectionButton }
+    components: { SectionButton },
+    data: () => {
+      return {
+        bee, ray
+      }
+    }
 }
 </script>
 
 <template>
   <div id="sectionsContainer">
-    <SectionButton name="Projects" image='/src/assets/images/sphereroom.png' path="/projects"/>
-    <SectionButton name="Experience" image='/src/assets/images/ProfessionalPic.jpg' path="/experience"/>
-    <SectionButton name="Hobbies" image='/src/assets/images/bee.png' path="/hobbies"/>
+    <SectionButton name="Projects" :image='ray' path="/projects"/>
+    <SectionButton name="Experience" :image='ray' path="/experience"/>
+    <SectionButton name="Hobbies" :image='bee' path="/hobbies"/>
   </div>
 </template>
 
