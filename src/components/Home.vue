@@ -8,9 +8,9 @@ export default {
 
 <template>
   <div id="sectionsContainer">
-    <SectionButton name="Projects" image='src/assets/images/sphereroom.png' path="/projects"/>
-    <SectionButton name="Experience" image='src/assets/images/ProfessionalPic.jpg' path="/experience"/>
-    <SectionButton name="Hobbies" image='src/assets/images/bee.png' path="/hobbies"/>
+    <SectionButton name="Projects" image='/src/assets/images/sphereroom.png' path="/projects"/>
+    <SectionButton name="Experience" image='/src/assets/images/ProfessionalPic.jpg' path="/experience"/>
+    <SectionButton name="Hobbies" image='/src/assets/images/bee.png' path="/hobbies"/>
   </div>
 </template>
 
