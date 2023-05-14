@@ -1,22 +1,23 @@
 <script>
+import SectionButton from './SectionButton.vue';
+
 export default {
-  data() {
-    return {
-      hi: 1,
-      blue: "hello"
-    }
-  },
-  watch: {
-    blue() {
-      console.log(this.blue)
-    }
-  }
+    components: { SectionButton }
 }
 </script>
 
 <template>
-  <input v-model="blue" /> aa
+  <div id="sectionsContainer">
+    <SectionButton name="hello hello hello hello hellohello"/>
+    <SectionButton name="hello2"/>
+    <SectionButton name="hello3"/>
+  </div>
 </template>
 
 <style scoped>
+#sectionsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 </style>
