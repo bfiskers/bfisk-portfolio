@@ -2,13 +2,13 @@
 import SectionButton from './SectionButton.vue';
 import bee from '../assets/images/bee.png';
 import ray from '../assets/images/sphereroom.png';
-//import prof from '../assets/images/ProfessionalPic.jpg';
+import prof from '../assets/images/ProfessionalPic.png';
 
 export default {
     components: { SectionButton },
     data: () => {
       return {
-        bee, ray
+        bee, ray, prof
       }
     }
 }
@@ -17,7 +17,7 @@ export default {
 <template>
   <div id="sectionsContainer">
     <SectionButton name="Projects" :image='ray' path="/projects"/>
-    <SectionButton name="Experience" :image='ray' path="/experience"/>
+    <SectionButton name="Experience" :image='prof' path="/experience"/>
     <SectionButton name="Hobbies" :image='bee' path="/hobbies"/>
   </div>
 </template>
