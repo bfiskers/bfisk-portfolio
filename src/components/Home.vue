@@ -1,7 +1,7 @@
 <script>
 import SectionButton from './SectionButton.vue';
 import bee from '../assets/images/bee.png';
-import ray from '../assets/images/sphereroom.png';
+import ray from '../assets/images/Ray Tracing/sphereroom.png';
 import prof from '../assets/images/ProfessionalPic.png';
 
 export default {

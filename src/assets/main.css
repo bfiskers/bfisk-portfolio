@@ -1,3 +1,16 @@
 * {
     font-family: 'Nunito', sans-serif;
 }
+
+body {
+    margin: 0;
+    background-color: #2c2942;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+p {
+    line-height: 22px;
+}
