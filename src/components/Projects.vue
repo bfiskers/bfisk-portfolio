@@ -219,7 +219,7 @@ img {
 
 @media only screen and (max-width : 700px) {
   .projectContainer {
-    width: 90%;
+    width: 85%;
   }
 
   .projectDesc {

@@ -2,6 +2,13 @@
     font-family: 'Comfortaa', sans-serif;
 }
 
+* {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
 h2 {
     margin-top: 10px;
 }
