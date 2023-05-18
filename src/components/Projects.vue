@@ -157,7 +157,7 @@ export default {
   flex: 4 1 0;
   align-self: center;
   overflow: hidden;
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 
@@ -199,7 +199,8 @@ export default {
 }
 
 img {
-  width: -webkit-fill-available;
+  width: 100%;
+  max-width: 100%;
 }
 
 .projectTag {
