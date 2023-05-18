@@ -28,7 +28,7 @@ export default {
   width: 40%;
   padding-top: 60px;
   padding-bottom: 60px;
-  box-shadow: 2px 2px grey;
+  /* box-shadow: 2px 2px grey; */
   margin: 10px;
   min-width: 300px;
   display: flex;

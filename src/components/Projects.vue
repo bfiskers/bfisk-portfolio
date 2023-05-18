@@ -28,7 +28,8 @@ export default {
             `],
             color: "56, 161, 199",
             imageLeft: true,
-            image: [bee, ray1, prof],
+            image: [ray1, bee, prof],
+            tags: ["html", "css"]
           },
           {
             name: "Ray Tracing Scenes",
@@ -40,11 +41,11 @@ export default {
               can be reflective and/or transparent to imitate glass or mirrors. When multiple reflective objects
               are present, reflections can be recursive up to a user-chosen threshhold.
             `,`
-              Made for Intermediate Graphics (CS 351-2) at Northwestern University
-            `, `Tools: WebGL, Javascript, HTML`],
+              Made for Intermediate Graphics (CS 351-2) at Northwestern University`],
             color: "201, 58, 82",
             imageLeft: false,
-            image: [ray1, ray3, ray4, ray2, ray5],
+            image: [ray1, ray3, ray4, ray5, ray2],
+            tags: ["WebGL", "JavaScript", "HTML"]
           },
           {
             name: "Space Evaders",
@@ -64,6 +65,7 @@ export default {
             color: "240, 199, 17",
             imageLeft: true,
             image: [bee, ray1],
+            tags: ["Unity", "Hello", "HTML"]
           },
         ]
       }
@@ -100,15 +102,20 @@ export default {
     <div v-for="project in projects" class="projectContainer" :style="'--rgb: ' + project.color + '; flex-direction: ' + (project.imageLeft ? 'unset' : 'row-reverse')">
       <div class="projectImage">
         <div class="projectImageHolder" :style="'left: ' + (project.imageScroller ? '' + (project.imageScroller * -100) + '%' : '0px')">
-          <img v-for="im in project.image" :src="im"/>
+          <div v-for="im in project.image" class="imageHolder">
+            <img :src="im"/>
+          </div>
         </div>
         <div class="slideshowButtonsHolder">
-          <button class="slideshowButton" v-for="(im, ind) in project.image" @click="scrollImage(project, ind)" :style="'background-color: ' + (project.imageScroller === ind ? 'white' : 'black')"></button>
+          <button class="slideshowButton" v-for="(im, ind) in project.image" @click="scrollImage(project, ind)" :style="'background-color: ' + (project.imageScroller === ind ? 'white; opacity: 1;' : 'black')"></button>
         </div>
       </div>
       <div class="projectDesc">
         <h2>{{ project.name }}</h2>
         <p v-for="paragraph in project.text">{{ paragraph }}</p>
+        <div class="tagHolder">
+          <div v-for="tag in project.tags" class="projectTag">{{ tag }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -117,18 +124,20 @@ export default {
 <style scoped>
 .projectContainer {
   background-color: rgba(var(--rgb), 0.7);
-  display: flex;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 80%;
   max-width: 1000px;
+  border: 1px solid black;
+  filter: drop-shadow(5px 5px 6px grey);
 }
 
 .projectContainer:hover{
   background-color: rgba(var(--rgb), 1.0);
+  filter: drop-shadow(5px 5px 12px grey);
+
 }
 
 .projectDesc {
@@ -148,6 +157,8 @@ export default {
   flex: 4 1 0;
   align-self: center;
   overflow: hidden;
+  width: 70%;
+  margin: auto;
 }
 
 .projectImageHolder {
@@ -162,6 +173,8 @@ export default {
 }
 
 .slideshowButton {
+  background-color: black;
+  transition: all 0.5s;
   border-radius: 100%;
   height: 17px;
   width: 17px;
@@ -169,6 +182,11 @@ export default {
   margin: 0;
   border: none;
   margin: 3px;
+  opacity: 0.6;
+}
+
+.slideshowButton:hover {
+  opacity: 1;
 }
 
 .slideshowButtonsHolder {
@@ -176,22 +194,39 @@ export default {
   justify-content: center;
 }
 
+.imageHolder {
+  min-width: 100%;
+}
+
 img {
-  width: 100%;
+  width: -webkit-fill-available;
+}
+
+.projectTag {
+  background-color: skyblue;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 14px;
+  margin-right: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.tagHolder {
+  display: flex;
 }
 
 @media only screen and (max-width : 700px) {
   .projectContainer {
-    width: 100%;
-    display: block;
+    width: 90%;
   }
 
   .projectDesc {
     max-height: unset;
   }
 
-  img {
-    width: -webkit-fill-available;
+  .projectImage {
+    width: 100%;
   }
 }
 </style>
