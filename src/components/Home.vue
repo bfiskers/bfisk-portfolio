@@ -28,5 +28,6 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 </style>

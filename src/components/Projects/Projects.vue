@@ -15,17 +15,7 @@ export default {
           {
             name: "Dungeon Defense",
             text: [`
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello 
+              Under Construction
             `],
             color: "56, 161, 199",
             imageLeft: true,
@@ -51,17 +41,7 @@ export default {
           {
             name: "Space Evaders",
             text: [`
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
-              hello hello hello hello hello hello hello hello hello hello hello hello 
+              Under Construction
             `],
             color: "240, 199, 17",
             imageLeft: true,
@@ -104,5 +84,6 @@ export default {
 <style scoped>
 .padding {
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 </style>
