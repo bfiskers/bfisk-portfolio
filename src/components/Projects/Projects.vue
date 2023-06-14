@@ -8,6 +8,7 @@ import ray5 from '../../assets/images/Ray Tracing/refract.png';
 import prof from '../../assets/images/ProfessionalPic.png';
 import dd1 from '../../assets/images/DungeonDef/DungeonDefense1.png';
 import dd2 from '../../assets/images/DungeonDef/DungeonDefense2.png';
+import dmid from '../../assets/images/DMID/dmid_front.png';
 import Project from './Project.vue';
 
 export default {
@@ -47,6 +48,17 @@ export default {
             color: "240, 199, 17",
             image: [bee, ray1],
             tags: ["Unity", "Hello", "HTML"]
+          },
+          {
+            name: "The Amazing Disappearing Notes",
+            blurb: `
+              A musical instrument made with household items, an arduino, and 6 sensors. It allows the user to experiment with rhythms by turning on and off a series of four notes.
+              Click on the link below to learn more!
+            `,
+            color: "237, 183, 102",
+            image: [dmid],
+            tags: ["Max MSP", "Arduino"],
+            route: "/dmid"
           },
         ],
         activeProject: null

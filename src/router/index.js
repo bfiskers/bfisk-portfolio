@@ -32,7 +32,10 @@ const router = createRouter({
       name: 'dmid',
       component: () => import('../components/Projects/DMID.vue')
     }
-  ]
+    ],
+    scrollBehavior() {
+        document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+    }
 })
 
 export default router
